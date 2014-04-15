@@ -1,0 +1,85 @@
+{% if page.nav_bar %}
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="ClickToCallCtrl">
+  <div class="container">
+    <a href="/" class="btn navbar-btn btn-default col-md-1 col-sm-1"><i class="fa fa-home"></i></a>
+    <button mixpanel-click="Navbar mobile click to call clicked" type="button" class="btn btn-success navbar-btn col-md-4 col-xs-offset-1" ng-click="triggerCall(' 8664107616')"><i class="fa fa-phone"></i><span class="hidden-xs">Call us - Toll free</span></button>
+    <button mixpanel-click="Navbar go to form clicked" type="button" class="btn btn-primary navbar-btn col-md-4 col-xs-offset-1" ng-click="goToLeadForm()"><i class="fa fa-pencil"></i> <span class="hidden-xs">Let us contact you</span></button>
+  </div>
+</nav>
+{% endif %}
+
+{% unless page.no_header %}
+{% if page.image.feature %}
+{% capture image %}{{site.url}}/img/{{ page.image.feature }}.jpg{% endcapture %}
+{% capture image_medium %}{{site.url}}/img/{{ page.image.feature }}_medium.jpg{% endcapture %}
+{% capture image_small %}{{site.base_path}}/img/{{ page.image.feature }}_small.jpg{% endcapture %}
+<style>
+
+  .blog-header.header-white {
+    background-image: url('{{ image }}');
+  }
+
+  @media (max-width: 768px) {
+    .blog-header.header-white {
+      background-image: url('{{  image_medium }}');
+    }
+  }
+
+  @media (max-width: 320px) {
+    .blog-header.header-white {
+      background-image: url('{{  image_small | base64 }}');
+    }
+  }
+</style>
+<div class="visible-xs top-logo">
+  <img src="/img/logo.png" style="width: 60%;"/>
+
+  <h2 style="text-align: center;text-transform: none">Qualify for Student Loan Forgiveness Call for FREE eligibility check!!!</h2>
+</div>
+<header class="blog-header header-white header-overlay align-center align-middle" itemscope itemtype="http://schema.org/Organization">
+  {% else %}
+  <header class="blog-header header-white header-overlay align-center align-middle" style="background-image: url('{{site.url}}img/{{ site.default_bg }}')" itemscope itemtype="http://schema.org/Organization">
+    {% endif %}
+    {% if page.headline %}
+    <div class="header-inner">
+      <div class="container">
+        <a class="brand light" href="{{ site.url }}" role="banner" itemprop="url">
+          {% if site.logo %}
+          <img itemprop="logo" src="{{ site.url }}/img/{{ site.logo }}" alt="{{ site.title }} Logo">
+          {% endif %}
+        </a>
+
+        <h2 class="blog-description light bordered bordered-top" itemprop="description">
+          {{ page.headline }}
+        </h2>
+      </div>
+    </div>
+    {% else %}
+    <div class="header-inner">
+      <div class="container">
+        <a class="brand light" href="{{ site.url }}" role="banner" itemprop="url">
+          {% if site.logo %}
+          <img itemprop="logo" src="{{ site.url }}/img/{{ site.logo }}" alt="Blog Logo">
+          {% endif %}
+        </a>
+      </div>
+    </div>
+    {% endif %}
+  </header>
+
+  <script>
+
+    var header = document.getElementsByClassName('blog-header');
+    var screenWidth = document.documentElement.clientWidth;
+
+    var headerHeight = 0;
+    if (screenWidth > 640)
+      headerHeight = screenWidth / 2.5
+    else
+      headerHeight = screenWidth / 2.5
+
+    header[0].style.height = headerHeight + 'px';
+
+  </script>
+
+  {% endunless %}

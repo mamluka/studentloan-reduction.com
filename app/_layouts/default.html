@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="no-js" ng-app="landingPage">
+  <head>
+    {% include head.html %}
+    <!-- build:css({app,.tmp}) /css/main.css -->
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- endbuild -->
+
+    {% include icons.html %}
+
+  </head>
+  <body>
+    {% include header.html %}
+
+    <div id="main" class="content" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
+      <div class="container">
+        <article class="post hentry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          <div class="row">
+            {% assign ert = page.content | strip_html | number_of_words | divided_by:180 %}
+            {% assign ertremainder = page.content | strip_html | number_of_words | modulo:180 %}
+            {% if ertremainder >= 90 %}
+            {% assign readtime = ert | plus:1 %}
+            {% else %}
+            {% assign readtime = ert %}
+            {% endif %}
+            {% assign modifiedtime = page.modified | date: "%Y%m%d" %}
+            {% assign posttime = page.date | date: "%Y%m%d" %}
+            {% if page.link %}
+            <h1 class="post-title text-center hyper lighter entry-title" itemprop="headline"><a href="{{ page.link }}" data-toggle="tooltip" title="Go to {{ page.link }}">{{ page.title }} <span class="link-arrow">&rarr;</span></a></h1>
+            {% elsif page.title %}
+            <h1 class="post-title text-center hyper lighter entry-title" itemprop="headline">{{ page.title }} <!-- <i class="fa-chevron-down fa"></i> --></h1>
+            {% endif %}
+
+            <div class="post-body bordered-bottom col-md-12 entry-content" itemprop="description">
+              {% if page.video %}
+              {% assign video_embed = page.video | remove:'http://www.youtube.com/watch?v=' %}
+              <iframe width="940" height="529" src="//www.youtube.com/embed/{{ video_embed }}?theme=light&amp;color=white" frameborder="0" allowfullscreen></iframe>
+              {% endif %}
+              {{ content }}
+              <br>
+
+            </div>
+          </div>
+          <footer class="post-footer entry-meta">
+            <!--{% include share.html %}-->
+            {% include signoff.html %}
+            {% if site.disqus_shortname and page.comments %}
+            <div id="disqus_thread"></div>
+            <!-- /#disqus_thread -->
+            {% endif %}
+          </footer>
+        </article>
+      </div>
+    </div>
+
+    {% include footer.html %}
+    {% include scripts.html %}
+    {% include analytics.html %}
+
+  </body>
+</html>

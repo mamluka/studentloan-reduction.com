@@ -1,0 +1,27 @@
+<div ng-controller="ClickToCallCtrl">
+  <div class="row visible-sm visible-md visible-lg" style="margin-top: 20px; margin-bottom: 20px;">
+    <div class="col-md-12" style="padding: 5px; text-align: center" ng-show="desktop">
+      <a mixpanel-click="Zingaya click to call clicked" facebook-pixel="6013014157743" class="zingayaButton zingaya3cd76f2c465e44d990bd18809b8e8d84" id="zingayaButton3cd76f2c465e44d990bd18809b8e8d84" href="https://zingaya.com/widget/3cd76f2c465e44d990bd18809b8e8d84" onclick="window.open(this.href+'?referrer='+escape(window.location.href)+'', '_blank', 'width=236,height=220,resizable=no,toolbar=no,menubar=no,location=no,status=no'); return false;"></a>
+    </div>
+    <div class="col-md-12" style="text-align: center" ng-show="desktop"><h2>Or</h2></div>
+    <div class="col-md-12" style="padding: 5px; text-align: center;">
+      <h1>Toll Free: <a href="" ng-click="triggerCall(' 8664107616')" mixpanel-click="Toll free clicked"> 866-410-7616</a></h1>
+      <ul style="text-align: left">
+        <li>
+          <p>Lower Your Student Loan Payments Today!</p>
+        </li>
+        <li>
+          <p>Qualify for Loan Forgiveness</p>
+        </li>
+        <li>
+          <p>Student Loan Forgiveness Program For Qualified Graduates.</p>
+        </li>
+        <li>
+          <p>Read more below...</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <a ng-click="triggerCall(' 8664107616')" mixpanel-click="Mobile click to call clicked" class="visible-xs click-to-call-button"><img src="/img/call.png"/></a>
+</div>

@@ -1,0 +1,67 @@
+<div ng-controller="FormCtrl">
+  <form style="margin-bottom: 20px;" role="form" name="lead">
+    <div class="controls">
+      <div class="row">
+        <div class="col-md-7 ">
+          <div class="has-feedback form-group" ng-class="{'has-success': lead.name.$valid,'has-error': lead.name.$invalid && !lead.name.$pristine}">
+            <input mixpanel-input class="form-control input-lg" type="text" placeholder="Name" ng-model="name" required name="name">
+            <span class="fa fa-check form-control-feedback input-validation-icon" ng-show="!lead.name.$pristine" ng-class="{'fa-check': lead.name.$valid, 'fa-minus': lead.name.$invalid && !lead.name.$pristine }"></span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 ">
+          <div class="has-feedback form-group" ng-class="{'has-success': lead.zip.$valid,'has-error': lead.zip.$invalid && !lead.zip.$pristine}">
+            <input mixpanel-input class="form-control input-lg" type="tel" placeholder="Zip" ng-model="zip" required ng-pattern="/^\d{5}$/" name="zip" ng-class="{'has-success': lead.zip.$valid,'has-error': lead.zip.$invalid && !lead.zip.$pristine}">
+            <span class="fa fa-check form-control-feedback input-validation-icon" ng-show="!lead.zip.$pristine" ng-class="{'fa-check': lead.zip.$valid, 'fa-minus': lead.zip.$invalid && !lead.zip.$pristine }"></span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="has-feedback form-group" ng-class="{'has-success': lead.phone.$valid,'has-error': lead.phone.$invalid && !lead.phone.$pristine}">
+            <input mixpanel-input class="form-control input-lg" type="tel" placeholder="Phone" ng-model="phone" required ng-pattern="/^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$/" name="phone" ng-class="{'has-success': lead.phone.$valid,'has-error': lead.phone.$invalid && !lead.phone.$pristine}">
+            <span class="fa fa-check form-control-feedback input-validation-icon" ng-show="!lead.phone.$pristine" ng-class="{'fa-check': lead.phone.$valid, 'fa-minus': lead.phone.$invalid && !lead.phone.$pristine }"></span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="has-feedback form-group">
+            <select mixpanel-select class="form-control" required name="loanType" ng-class="{'has-success': lead.loanType.$valid,'has-error': lead.loanType.$invalid && !lead.loanType.$pristine}" ng-model="loanType">
+              <option value="" selected>Select Type of Student Loans</option>
+              <option value="Federal">Federal</option>
+              <option value="Private">Private</option>
+              <option value="Both">Both</option>
+              <option value="Unknown">I Don't Know</option>
+            </select>
+            <span class="fa fa-check form-control-feedback select-validation-icon" ng-show="!lead.loanType.$pristine" ng-class="{'fa-check': lead.loanType.$valid, 'fa-minus': lead.loanType.$invalid && !lead.loanType.$pristine }"></span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="has-feedback form-group">
+            <select mixpanel-select class="form-control" ng-model="loanAmount" required name="loanAmount" ng-class="{'has-success': lead.loanAmount.$valid,'has-error': lead.loanAmount.$invalid && !lead.loanAmount.$pristine}">
+              <option value="" selected>Select Loan Debt Amount</option>
+              <option value="7500">Below $10,000</option>
+              <option value="15000">$10,000 - $19,000</option>
+              <option value="25000">$20,000 - $29,000</option>
+              <option value="35000">$30,000 - $39,000</option>
+              <option value="45000">$40,000 - $49,000</option>
+              <option value="55000">$50,000 - $59,000</option>
+              <option value="65000">$60,000 - $69,000</option>
+              <option value="75000">$70,000 - $79,000</option>
+              <option value="85000">$80,000 - $89,000</option>
+              <option value="95000">$90,000 - $99,000</option>
+              <option value="100000">Over $100,000</option>
+            </select>
+            <span class="fa fa-check form-control-feedback select-validation-icon" ng-show="!lead.loanAmount.$pristine" ng-class="{'fa-check': lead.loanAmount.$valid, 'fa-minus': lead.loanAmount.$invalid && !lead.loanAmount.$pristine }"></span>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-primary btn-lg" ng-click="submit()" ng-disabled="submitting">Contact me later</button>
+    </div>
+  </form>
+</div>

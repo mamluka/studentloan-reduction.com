@@ -1,0 +1,9 @@
+{
+  "name": "education-debt-relief-test-1",
+  "version": "0.0.0",
+  "dependencies": {
+    "modernizr": "~2.7",
+    "font-awesome": "~4.0.3",
+    "twbs-bootstrap-sass": "~3.1.1"
+  }
+}
