@@ -10,7 +10,7 @@ mathjax:
 
 {% include lead-collection.html %}
 
-{% include tv.html %}
+
 
 # Solve Your Student Loan Issues Now!
 
