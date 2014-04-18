@@ -12,30 +12,19 @@ mathjax:
 
 
 
-# Solve Your Student Loan Issues Now!
+# Grow your business with new clients now!
 
-* Lower Your Student Loan Payments Today!
+* First page ranking! (we get the majority of our clients there)
+* Activate Click-To-Call features.
+* Show hi-res photos of your business online.
+* Reach out to NEW customers.
+* Quick Setup
+* Quick Results
+* Harness web traffic.
+* Let people online know who you are.
+* No website, no problem!
+* 100% SATISFACTION GUARANTEE!
 
-* Qualify for Loan Forgiveness
+# IT’S “MISSION CRITICAL”
 
-* Student Loan Forgiveness Program For Qualified Graduates.
-
-* 1 Payment Student Loan Debt Relief Option.
-
-* Federal Student Loan Debt Consolidation Plans.
-
-* Refinance Student Loans As Low As 2-8%.
-
-* 90-Day Deferment On Current Loans While Processing Consolidation.
-
-* Standard and Graduated Student Loan Debt Consolidation Plans.
-
-* 100% MONEY BACK GUARANTEE!
-
-# OBAMA STUDENT LOAN FORGIVENESS PROGRAM
-
-“Let's tell another one million students that when they graduate, they will be required to pay only 10 percent of their income on student loans, and all of their debt will be forgiven after 20 years –- and forgiven after 10 years if they choose a career in public service, because in the United States of America, no one should go broke because they chose to go to college.”
-
-**– President Barack Obama,**
-
-January 27, 2010
+Our Mission Critical package covers the most basic and fundamental marketing tools for any business. For small, local businesses, this is crucial. There are prospective customers that are looking for you NOW. Simply allow us to help them FIND YOU. It’s simple. Give us a call and we will help you build your business.
